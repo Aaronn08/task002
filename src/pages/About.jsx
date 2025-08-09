@@ -1,11 +1,14 @@
+import "./About.css";
+
 export default function About() {
   return (
-    <div>
+    <section className="about">
       <h1>About Us</h1>
       <p>
-        Smart Home Company is dedicated to building intelligent home systems
-        that enhance your daily life.
+        Smart Home Company has been innovating in home automation for over a
+        decade. Our mission is to create homes that are not only smart but
+        also sustainable.
       </p>
-    </div>
+    </section>
   );
 }

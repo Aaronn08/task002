@@ -1,8 +1,14 @@
+import "./Home.css";
+
 export default function Home() {
   return (
-    <div>
+    <section className="home">
       <h1>Welcome to Smart Home Company</h1>
-      <p>We make your home smarter, safer, and more comfortable.</p>
-    </div>
+      <p>
+        Control and monitor your home with ease. From lighting to security,
+        we make your home smarter and safer.
+      </p>
+      <button>Get Started</button>
+    </section>
   );
 }

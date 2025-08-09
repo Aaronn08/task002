@@ -1,11 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
+import "./Temperature.css";
 
 export default function Temperature() {
   const [fetchedTemp, setFetchedTemp] = useState(null);
   const [error, setError] = useState(null);
 
-  const API_BASE = "https://cors-anywhere.herokuapp.com/https://aaron08.pythonanywhere.com";
+  const API_BASE =
+    "https://cors-anywhere.herokuapp.com/https://aaron08.pythonanywhere.com";
 
   const fetchTemperature = async () => {
     try {
@@ -19,11 +21,11 @@ export default function Temperature() {
   };
 
   return (
-    <div>
+    <section className="temperature">
       <h1>Temperature</h1>
       <button onClick={fetchTemperature}>Get Temperature</button>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      {fetchedTemp !== null && <p>{fetchedTemp}°C</p>}
-    </div>
+      {error && <p className="error">{error}</p>}
+      {fetchedTemp !== null && <p className="result">{fetchedTemp}°C</p>}
+    </section>
   );
 }
